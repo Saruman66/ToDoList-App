@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO LIST</title>
+    <!-- Declaración del documento como HTML5 -->
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive ajustándose al ancho del dispositivo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Enlace a los íconos de Font Awesome para usar íconos en el diseño -->
+    <link rel="stylesheet" href="style.css"> <!-- Enlace a la hoja de estilos personalizada -->
+    <title>TO DO LIST</title> <!-- Título de la página que aparecerá en la pestaña del navegador -->
 </head>
 <body>
-    <div class="container">
-        <div class="perfil">
-            <!-- SE UTILIZAN LOS ID PARA IDENTIFICAR LOS ELEMENTOS EN 
-             JAVASCRIPT  -->
-            <div id="fecha">
-                
-            </div>
+    <div class="container"> <!-- Contenedor principal para organizar todos los elementos de la página -->
+        <div class="perfil"> <!-- Sección del perfil del usuario -->
+            <div id="fecha"></div> <!-- Elemento donde se mostrará la fecha actual; se actualizará dinámicamente con JavaScript -->
 
-            <h1>Hola, Rajesh Daya</h1>
-            <span>Vamos a Cumplir tus metas</span>
-
+            <h1>Hola, Rajesh Daya</h1> <!-- Título personalizado con el nombre del usuario -->
+            <span>Vamos a Cumplir tus metas</span> <!-- Texto motivador para el usuario -->
         </div>
 
-        <div class="agregar-tarea"></div>
-        <div class="seccion-tarea"></div>
+        <div class="agregar-tarea"> <!-- Sección para agregar nuevas tareas -->
+            <input type="text" id="input" placeholder="agregar una tarea"> <!-- Campo de entrada de texto para que el usuario escriba su nueva tarea -->
+            <i id="enter" class="fas fa-plus-circle"></i> <!-- Ícono con el ID "enter" para agregar tareas al hacer clic -->
+        </div>
+        
+        <div class="seccion-tarea"> <!-- Sección donde se mostrarán las tareas pendientes -->
+            <h3>Estas son tus tareas Pendientes</h3> <!-- Título para la lista de tareas -->
 
-
+            <ul id="lista"> <!-- Lista no ordenada donde se incluirán las tareas dinámicamente -->
+                <li> <!-- Un ítem de tarea de ejemplo -->
+                    <i class="far fa-plus-circle co" data="realizado" id="0"></i> <!-- Ícono para marcar la tarea como completada; usa clases e identificadores para interacciones -->
+                    <p class="text">hacer la tarea de español</p> <!-- Texto descriptivo de la tarea -->
+                    <i class="fas fa-trash de" data="eliminado" id="0"></i> <!-- Ícono de basura para eliminar la tarea; usa un identificador para diferenciarla -->
+                </li>
+            </ul>
+        </div>
     </div>
+
+    <script src="script.js"></script> <!-- Archivo JavaScript que manejará la funcionalidad interactiva -->
 </body>
 </html>
