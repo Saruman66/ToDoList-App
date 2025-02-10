@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Declaración del documento como HTML5 -->
-        <meta charset="UTF-8"> 
-        <!-- Establece la codificación de caracteres como UTF-8, permitiendo el uso de caracteres especiales como tildes y eñes sin problemas -->
-    
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <!-- Configura la vista para que la página sea responsive, ajustándose al ancho del dispositivo en el que se visualiza -->
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- Estas líneas optimizan la carga de fuentes de Google Fonts, estableciendo conexiones previas con sus servidores para mejorar la velocidad de carga -->
-    
-        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
-        <!-- Importa la fuente "Prompt" desde Google Fonts con pesos de 400 (regular) y 600 (semi-negrita), para su uso en el diseño de la página -->
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <!-- Enlace a la biblioteca de íconos Font Awesome versión 5.15.4, lo que permite usar íconos en la página mediante clases CSS -->
-    
-        <link rel="stylesheet" href="style.css">
-        <!-- Vincula la hoja de estilos personalizada "style.css", que contiene la apariencia y el diseño de la página -->
-    
-        <title>TO DO LIST</title>
-        <!-- Define el título de la página que aparecerá en la pestaña del navegador -->
-    </head>
-    
-<body>
-    <div class="container"> <!-- Contenedor principal para organizar todos los elementos de la página -->
-        <div class="perfil"> <!-- Sección del perfil del usuario -->
-            <div id="fecha">Jueves 1 de diciembre</div> <!-- Elemento donde se mostrará la fecha actual; se actualizará dinámicamente con JavaScript -->
+  <head>
+    <!-- Declaración del documento como HTML5 -->
+    <meta charset="UTF-8" />
+    <!-- Establece la codificación de caracteres como UTF-8, permitiendo el uso de caracteres especiales como tildes y eñes sin problemas -->
 
-            <h1>Hola, Rajesh Daya</h1> <!-- Título personalizado con el nombre del usuario -->
-            <span>Vamos a Cumplir tus metas</span> <!-- Texto motivador para el usuario -->
-        </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configura la vista para que la página sea responsive, ajustándose al ancho del dispositivo en el que se visualiza -->
 
-        <div class="agregar-tarea"> <!-- Sección para agregar nuevas tareas -->
-            <input type="text" id="input" placeholder="agregar una tarea"> <!-- Campo de entrada de texto para que el usuario escriba su nueva tarea -->
-            <i id="enter" class="fas fa-plus-circle"></i> <!-- Ícono con el ID "enter" para agregar tareas al hacer clic -->
-        </div>
-        
-        <div class="seccion-tarea"> <!-- Sección donde se mostrarán las tareas pendientes -->
-            <h3>Estas son tus tareas Pendientes</h3> <!-- Título para la lista de tareas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Estas líneas optimizan la carga de fuentes de Google Fonts, estableciendo conexiones previas con sus servidores para mejorar la velocidad de carga -->
 
-            <ul id="lista"> <!-- Lista no ordenada donde se incluirán las tareas dinámicamente -->
-                <li> <!-- Un ítem de tarea de ejemplo -->
-                    <i class="far fa-circle co" data="realizado" id="0"></i> <!-- Ícono para marcar la tarea como completada; usa clases e identificadores para interacciones -->
-                    <p class="text">hacer la tarea de español</p> <!-- Texto descriptivo de la tarea -->
-                    <i class="fas fa-trash de" data="eliminado" id="0"></i> <!-- Ícono de basura para eliminar la tarea; usa un identificador para diferenciarla -->
-                </li>
-            </ul>
-        </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importa la fuente "Prompt" desde Google Fonts con pesos de 400 (regular) y 600 (semi-negrita), para su uso en el diseño de la página -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Enlace a la biblioteca de íconos Font Awesome versión 5.15.4, lo que permite usar íconos en la página mediante clases CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Vincula la hoja de estilos personalizada "style.css", que contiene la apariencia y el diseño de la página -->
+
+    <title>TO DO LIST</title>
+    <!-- Define el título de la página que aparecerá en la pestaña del navegador -->
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Contenedor principal para organizar todos los elementos de la página -->
+      <div class="perfil">
+        <!-- Sección del perfil del usuario -->
+        <div id="fecha">Jueves 1 de diciembre</div>
+        <!-- Elemento donde se mostrará la fecha actual; se actualizará dinámicamente con JavaScript -->
+
+        <h1>Hola, Rajesh Daya</h1>
+        <!-- Título personalizado con el nombre del usuario -->
+        <span>Vamos a Cumplir tus metas</span>
+        <!-- Texto motivador para el usuario -->
+      </div>
+
+      <div class="agregar-tarea">
+        <!-- Sección para agregar nuevas tareas -->
+        <input type="text" id="input" placeholder="agregar una tarea" />
+        <!-- Campo de entrada de texto para que el usuario escriba su nueva tarea -->
+        <i id="enter" class="fas fa-plus-circle"></i>
+        <!-- Ícono con el ID "enter" para agregar tareas al hacer clic -->
+      </div>
+
+      <div class="seccion-tarea">
+        <!-- Sección donde se mostrarán las tareas pendientes -->
+        <h3>Estas son tus tareas Pendientes</h3>
+        <!-- Título para la lista de tareas -->
+
+        <ul id="lista">
+          <!-- Lista no ordenada donde se incluirán las tareas dinámicamente -->
+          <li>
+            <!-- Un ítem de tarea de ejemplo -->
+            <i class="far fa-circle co" data="realizado" id="0"></i>
+            <!-- Ícono para marcar la tarea como completada; usa clases e identificadores para interacciones -->
+            <p class="text">hacer la tarea de español</p>
+            <!-- Texto descriptivo de la tarea -->
+            <i class="fas fa-trash de" data="eliminado" id="0"></i>
+            <!-- Ícono de basura para eliminar la tarea; usa un identificador para diferenciarla -->
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <script src="script.js"></script> <!-- Archivo JavaScript que manejará la funcionalidad interactiva -->
-</body>
+    <script src="script.js"></script>
+    <!-- Archivo JavaScript que manejará la funcionalidad interactiva -->
+  </body>
 </html>
